@@ -1,0 +1,21 @@
+{
+    "name": "reygasai/engine-mine",
+    "description": "F3 Minecraft Base CMS",
+    "authors": [{
+        "name": "reygasai",
+        "email": "ReyCODE@yandex.ru"
+    }],
+
+    "require": {
+        "bcosca/fatfree-core": "^3.7"
+    },
+
+    "autoload": {
+        "psr-4": {
+            "App\\engine\\core\\": "app/engine/core",
+            "App\\engine\\helpers\\": "app/engine/helpers",
+            "App\\engine\\services\\": "app/engine/services",
+            "App\\engine\\classes\\": "app/engine/classes"
+        }
+    }
+}
