@@ -17,7 +17,7 @@
             "App\\engine\\services\\": "app/engine/services",
             "App\\engine\\classes\\": "app/engine/classes",
             "App\\engine\\patterns\\": "app/engine/patterns",
-            "App\\modules\\": "app/engine/core"
+            "App\\engine\\base\\": "app/engine/base"
         }
     }
 }

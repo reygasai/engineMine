@@ -1,7 +1,13 @@
 <?php
 namespace App\modules\main;
 
-class Logic {
+use App\engine\base\BaseLogic;
+
+class Logic extends BaseLogic {
+    public function __construct() {
+        parent::__construct();
+    }
+
     public function test() {
         echo "test";
     }

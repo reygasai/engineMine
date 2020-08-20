@@ -1,8 +1,13 @@
 <?php
 namespace App\modules\main;
-use App\modules\main\Logic;
 
-class Controller {
+use App\engine\base\BaseController; 
+
+class Controller extends BaseController {
+    public function __construct() {
+        parent::__construct();
+    }
+    
     public function index() {
         echo 'index';
     }
