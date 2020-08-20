@@ -1,19 +1,11 @@
 <?php
 namespace App\engine\classes;
+use App\engine\patterns\Singleton;
 
 class Config {
+    use Singleton;
     const CONFIG_EXTENSION = '.cfg.php'; 
-
     private static $cfg = [];
-    private static $instance = null;
-
-    public static function instance() {
-        if(static::$instance === null) {
-            static::$instance = new static();
-        }
-
-        return static::$instance;
-    }
 
     public function createConfig($name, $data) {
         if(!$this->checkIssetConfig($name)) {
@@ -106,8 +98,4 @@ class Config {
             self::$cfg[$configData[0]] = $this->loadDataConfig($config);
         }
     }
-
-    private function __construct(){}
-    private function __clone(){}
-    private function __wakeup(){}
 }

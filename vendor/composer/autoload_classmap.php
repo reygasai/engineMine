@@ -6,6 +6,9 @@ $vendorDir = dirname(dirname(__FILE__));
 $baseDir = dirname($vendorDir);
 
 return array(
+    'App\\engine\\classes\\Config' => $baseDir . '/app/engine/classes/Config.php',
+    'App\\engine\\classes\\Router' => $baseDir . '/app/engine/classes/Router.php',
+    'App\\engine\\patterns\\Singleton' => $baseDir . '/app/engine/patterns/Singleton.php',
     'Audit' => $vendorDir . '/bcosca/fatfree-core/audit.php',
     'Auth' => $vendorDir . '/bcosca/fatfree-core/auth.php',
     'Base' => $vendorDir . '/bcosca/fatfree-core/base.php',

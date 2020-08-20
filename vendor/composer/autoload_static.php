@@ -7,13 +7,11 @@ namespace Composer\Autoload;
 class ComposerStaticInit901890dc39a0c20e68205f1df979af13
 {
     public static $prefixLengthsPsr4 = array (
-        'F' => 
-        array (
-            'Framework\\' => 10,
-        ),
         'A' => 
         array (
+            'App\\modules\\' => 12,
             'App\\engine\\services\\' => 20,
+            'App\\engine\\patterns\\' => 20,
             'App\\engine\\helpers\\' => 19,
             'App\\engine\\core\\' => 16,
             'App\\engine\\classes\\' => 19,
@@ -21,13 +19,17 @@ class ComposerStaticInit901890dc39a0c20e68205f1df979af13
     );
 
     public static $prefixDirsPsr4 = array (
-        'Framework\\' => 
+        'App\\modules\\' => 
         array (
-            0 => 'C:\\webserver\\OpenServer\\domains\\engineMine.local\\vendor',
+            0 => __DIR__ . '/../..' . '/app/engine/core',
         ),
         'App\\engine\\services\\' => 
         array (
             0 => __DIR__ . '/../..' . '/app/engine/services',
+        ),
+        'App\\engine\\patterns\\' => 
+        array (
+            0 => __DIR__ . '/../..' . '/app/engine/patterns',
         ),
         'App\\engine\\helpers\\' => 
         array (
@@ -44,6 +46,9 @@ class ComposerStaticInit901890dc39a0c20e68205f1df979af13
     );
 
     public static $classMap = array (
+        'App\\engine\\classes\\Config' => __DIR__ . '/../..' . '/app/engine/classes/Config.php',
+        'App\\engine\\classes\\Router' => __DIR__ . '/../..' . '/app/engine/classes/Router.php',
+        'App\\engine\\patterns\\Singleton' => __DIR__ . '/../..' . '/app/engine/patterns/Singleton.php',
         'Audit' => __DIR__ . '/..' . '/bcosca/fatfree-core/audit.php',
         'Auth' => __DIR__ . '/..' . '/bcosca/fatfree-core/auth.php',
         'Base' => __DIR__ . '/..' . '/bcosca/fatfree-core/base.php',
