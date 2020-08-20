@@ -4,6 +4,7 @@ use App\engine\patterns\Singleton;
 
 class Config {
     use Singleton;
+    
     const CONFIG_EXTENSION = '.cfg.php'; 
     private static $cfg = [];
 

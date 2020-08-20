@@ -1,8 +1,15 @@
 <?php return [
     'main' => [
-        'name'       => 'main',
-        'patch'      => '/',
+        'module'     => 'main',
+        'controller' => 'index',
         'method'     => 'GET',
-        'callback'   => '',
-    ]
+        'pattern'    => '/',
+    ],
+
+    'rules' => [
+        'module'     => 'main',
+        'controller' => 'rules',
+        'method'     => 'GET',
+        'pattern'    => '/rules',
+    ],
 ];
