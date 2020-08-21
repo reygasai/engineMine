@@ -1,3 +1,4 @@
 <?php return [
-    'project' => 'engineMine',
+    'debug'    => 1,
+    'ui_patch' => 'theme/'
 ];

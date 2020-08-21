@@ -1,15 +1,13 @@
 <?php return [
     'main' => [
-        'module'     => 'main',
-        'controller' => 'index',
-        'method'     => 'GET',
-        'pattern'    => '/',
-    ],
+        '/' => [
+            'controller' => 'index',
+            'method'     => 'GET'        
+        ],
 
-    'rules' => [
-        'module'     => 'main',
-        'controller' => 'rules',
-        'method'     => 'GET',
-        'pattern'    => '/rules',
-    ],
+        '/rules' => [
+            'controller' => 'rules',
+            'method'     => 'GET' 
+        ]
+    ]
 ];

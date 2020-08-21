@@ -5,22 +5,28 @@ use App\engine\classes\Config;
 use Base;
 
 
-class Router {
+class Router { 
     public function __construct() {
+        /* Set base instance */
         $this->core   = Base::instance();
+
+        /* Set config instance */
         $this->config = Config::instance();
     }
 
     public function registerRoutes() {
-        foreach($this->config->getConfig('routes') as $route) {
-            $namespaceModule = "App\modules\\" . $route['module'] . "\\Controller";
-            
-            $this->core->route($route['method'] . ' ' . $route['pattern'], function() use ($route, $namespaceModule){
-                return call_user_func([
-                    new $namespaceModule,
-                    $route['controller']
-                ]);
-            });
+        foreach($this->config->getConfig('routes') as $module => $routes) {
+            $controllerNamespace = "App\modules\\" . $module . "\\Controller";
+            $controller = new $controllerNamespace;
+
+            foreach($routes as $pattern => $rules) {
+                $this->core->route($rules['method'] . ' ' . $pattern, function() use ($rules, $controller){
+                    return call_user_func([
+                        $controller,
+                        $rules['controller']
+                    ]);
+                });
+            }
         }
 
         return $this;
