@@ -1,15 +1,14 @@
 <?php
 namespace App\engine\base;
 
-use View;
-use Template;
+use App\engine\classes\Template;
 
 abstract class BaseController {
-    private $view;
-    private $template;
-
     public function __construct() {
-        $this->view = View::instance();
         $this->template = Template::instance();
-    }        
+    }
+
+    public function render() {
+        return $this->template->render();
+    }
 }

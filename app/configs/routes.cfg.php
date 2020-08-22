@@ -1,13 +1,22 @@
 <?php return [
     'main' => [
-        '/' => [
-            'controller' => 'index',
-            'method'     => 'GET'        
+        'GET' => [
+            '/' => [
+                'controller' => 'index',
+                'modifiers'  => ''        
+            ],
+    
+            '/params/@id/@id2' => [
+                'controller' => 'params',
+                'modifiers'  => 'GET' 
+            ]
         ],
-
-        '/rules' => [
-            'controller' => 'rules',
-            'method'     => 'GET' 
+        
+        'POST' => [
+            '/' => [
+                'controller' => 'index',
+                'modifiers'  => '[ajax]'        
+            ],
         ]
     ]
 ];

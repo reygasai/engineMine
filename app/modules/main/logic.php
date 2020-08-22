@@ -8,11 +8,11 @@ class Logic extends BaseLogic {
         parent::__construct();
     }
 
-    public function test() {
-        echo "test";
+    public function mainContent() {
+        return "display logic in main controller";
     }
 
-    public function test2() {
-        echo "test2";
+    public function mainParams($id) {
+        return "dispayed id is" . $id;
     }
 }

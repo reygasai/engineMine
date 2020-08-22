@@ -15,11 +15,13 @@ class Bootstrap {
 
         /* UI settings */
         $this->base->set('UI', $this->config->getConfig('main')['ui_patch']);
+        
+        /* Register routes */
+        $router = new Router($this);
+        $router->registerRoutes();
     }
 
     public function run() {
-        /* Create F3 router */
-        $router = new Router($this);
-        $router->registerRoutes()->run();
+        $this->base->run();
     }
 }
